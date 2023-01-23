@@ -1,0 +1,97 @@
+﻿
+.banner {
+    background: black;
+    height: 70px;
+    flex-direction: row;
+
+}
+
+
+.banner-img {
+    float: left;
+}
+
+.item {
+    min-height: 50px;
+    justify-content: space-between;
+    vertical-align: central;
+    padding: 1%;
+    display: inline-block;
+}
+
+.select {
+    display: flex;
+}
+
+.container {
+    margin: 10px 30px 10px 30px;
+    text-align: center;
+    vertical-align: central;
+    min-height: 30px;
+    min-width: 70px;
+}
+
+.events-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.enevt-container::after{
+    content: "";
+    clear: both;
+    display: table;
+    max-width: 50px;
+
+}
+
+.banner{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.cost {
+    align-content: flex-start;
+    font-size: 10px;
+}
+
+.event-name {
+    align-content: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.property{
+
+}
+
+.source {
+    align-content: center;
+    font-size: 10px;
+}
+
+
+.date-option {
+    align-content: center;
+    font-size: 10px;
+}
+
+
+.date {
+    align-content: flex-start;
+    font-size: 10px;
+}
+
+.emoji {
+    align-content: flex-end;
+    font-size: 5px;
+}
+
+
+body {
+    background-color: pink;
+    text-align: center;
+    min-width: 300px;
+}
