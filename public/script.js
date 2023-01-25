@@ -17,6 +17,7 @@ function generateHTML(data) {
         title.innerHTML = event.data.general.name;
 
         let imageElem = document.createElement('img');
+        imageElem.classList.add('img');
         imageElem.setAttribute("src", event.data.general.image.url);
         imageElem.style.maxHeight = "100%";
         imageElem.style.maxWidth = "100%";
@@ -26,19 +27,25 @@ function generateHTML(data) {
         shortDescription.innerHTML = event.data.general.shortDescription;
 
 
-        let fullAddress = document.createElement('p');
-        fullAddress.classList.add('event-address');
-        fullAddress.innerHTML = event.data.general.fullAddress;
+        let price = document.createElement('p');
+        price.classList.add('event-price');
+        if (event.data.general.price != null)
+            price.innerHTML = event.data.general.price + ' rub.';
+        else
+            price.innerHTML = 'no info';
+
         
 
         eventElem.appendChild(title);
         eventElem.appendChild(imageElem);
         eventElem.appendChild(shortDescription);
+        eventElem.appendChild(price);
 
         allEvents.appendChild(eventElem);
 
-        console.log(title);
-        console.log(imageElem);
-        console.log(shortDescription);
+        console.log(title.innerHTML);
+        console.log(imageElem.innerHTML);
+        console.log(shortDescription.innerHTML);
+        console.log(price.innerHTML);
     }
 }
